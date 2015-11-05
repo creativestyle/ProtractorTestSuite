@@ -1,0 +1,5 @@
+TODO:
+
+Move form parent selectors to from Form to Selector:
+    Forms shouldn't have any selectors. All selectors should life in Selector classes.
+    So selecting parent should be made somehow in Selector. Maybe by some special method.
