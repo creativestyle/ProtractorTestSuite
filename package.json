@@ -1,10 +1,11 @@
 {
-  "name": "ProtractorTestSuite",
+  "name": "protractor-test-suite",
   "version": "0.1.0",
   "description": "Protractor Test Suite",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+ssh://git@gitlab.creativestyle.pl:piotr.rogowski/ProtractorTestSuite.git"
   },
   "dependencies": {
     "app-module-path": "^1.0.4",
@@ -13,5 +14,6 @@
     "path": "^0.11.14",
     "mkdirp": "^0.5.1",
     "protractor": "^1.4.0"
-  }
+  },
+  "main": "initialization.js"
 }
