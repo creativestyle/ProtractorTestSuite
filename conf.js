@@ -20,6 +20,18 @@ settings.enabled.forEach(function (conf) {
   caps.push(cfg);
 });
 
+/**
+ * @typedef Object PTSSettings
+ * @property {number} [allScriptsTimeout]
+ * @property {number} [getPageTimeout]
+ * @property {number} [jasmineTimeout]
+ */
+
+/**
+ * @type {PTSSettings}
+ */
+var timeouts = settings.timeouts || {};
+
 exports.config = {
   seleniumAddress: settings.seleniumAddress,
   seleniumServerJar: settings.seleniumServerJar,
@@ -37,5 +49,10 @@ exports.config = {
     require('jasmine-expect');
   },
   multiCapabilities: caps,
-  maxSessions: settings.concurrent
+  maxSessions: settings.concurrent,
+  allScriptsTimeout: timeouts.allScriptsTimeout,
+  getPageTimeout: timeouts.getPageTimeout,
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: timeouts.jasmineTimeout
+  }
 };
