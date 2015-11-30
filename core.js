@@ -61,6 +61,12 @@ Core.async = function(fn) {
  * use it inside main describe function.
  */
 Core.failOnConsoleError = function () {
+  var doNotUse = false;
+
+  if(doNotUse) {
+    return;
+  }
+
   afterEach(function () {
     browser.manage().logs().get('browser')
       .then(function (browserLog) {
@@ -69,6 +75,9 @@ Core.failOnConsoleError = function () {
         }
         var msg = 'Number of console errors: ';
         expect(msg + browserLog.length).toBe(msg + 0);
+      }, function () {
+        doNotUse = true;
+        console.log('Browse does not support fetching log. failOnConsoleError is ignored!')
       });
 
   });
