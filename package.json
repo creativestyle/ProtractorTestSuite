@@ -8,12 +8,12 @@
     "url": "git+ssh://git@gitlab.creativestyle.pl:piotr.rogowski/ProtractorTestSuite.git"
   },
   "dependencies": {
-    "app-module-path": "^1.0.4",
-    "jasmine-collection-matchers": "^0.1.2",
-    "jasmine-expect": "~2.0.0-beta2",
-    "path": "^0.11.14",
+    "app-module-path": "^2.2.0",
+    "jasmine-collection-matchers": "^0.2.0",
+    "jasmine-expect": "~3.8.4",
+    "path": "^0.12.7",
     "mkdirp": "^0.5.1",
-    "protractor": "^1.4.0"
+    "protractor": "^5.4.1"
   },
   "main": "initialization.js"
 }
